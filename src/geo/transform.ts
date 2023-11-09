@@ -689,7 +689,7 @@ export class Transform {
         const unwrappedX = canonical.x + Math.pow(2, canonical.z) * unwrappedTileID.wrap;
 
         const posMatrix = mat4.identity(new Float64Array(16) as any);
-        mat4.translate(posMatrix, posMatrix, [unwrappedX * scale, canonical.y * scale, 100]);
+        mat4.translate(posMatrix, posMatrix, [unwrappedX * scale, canonical.y * scale, 400]);
         mat4.scale(posMatrix, posMatrix, [scale / EXTENT, scale / EXTENT, 1]);
         mat4.multiply(posMatrix, aligned ? this.alignedProjMatrix : this.projMatrix, posMatrix);
 
